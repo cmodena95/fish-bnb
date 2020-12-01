@@ -5,3 +5,30 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'faker'
+require "open-uri"
+
+puts 'Destroying fish(es)...'
+
+Fish.destroy_all
+
+puts 'Generating new and improved fish...'
+
+10.times do
+  file = URI.open('https://source.unsplash.com/featured/?fish')
+  name = Faker::GreekPhilosophers.name
+  description = "#{Faker::Demographic.marital_status} #{Faker::Demographic.sex} #{Faker::Demographic.demonym} fish. #{Faker::Demographic.height(unit: :imperial)}"
+  location = Faker::Address.city
+  price = "#{rand(1..10)} €"
+  fish = Fish.new(name: name, description: description, location: location, price: price)
+  fish.photo.attach(io: file, filename: 'fish.png', content_type: 'image/png')
+  fish.save
+  puts 'Fish successfully created'
+end
+
+puts 'Finished :)'
+
+
+
+
