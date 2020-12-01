@@ -9,22 +9,54 @@
 require 'faker'
 require "open-uri"
 
-puts 'Destroying fish(es)...'
+puts 'Flushing old fish down the toilet...'
 
 Fish.destroy_all
 
+puts 'Rehoming old users...'
+
+User.destroy_all
+
+puts 'Conceiving new users...'
+users = []
+
+puts 'Creating user 1...'
+
+user1 = User.create!(email: '111@gmail.com', password: '123456')
+users << user1
+
+puts 'Creating user 2...'
+
+user2 = User.create!(email: '222@gmail.com', password: '123456')
+users << user2
+
+puts 'Creating user 3...'
+
+user3 = User.create!(email: '333@gmail.com', password: '123456')
+users << user3
+
+puts 'Creating user 4...'
+
+user4 = User.create!(email: '444@gmail.com', password: '123456')
+users << user4
+
+puts 'We have shiny new users!'
+
+
+
 puts 'Generating new and improved fish...'
 
-10.times do
+25.times do
   file = URI.open('https://source.unsplash.com/featured/?fish')
   name = Faker::GreekPhilosophers.name
   description = "#{Faker::Demographic.marital_status} #{Faker::Demographic.sex} #{Faker::Demographic.demonym} fish. #{Faker::Demographic.height(unit: :imperial)}"
   location = Faker::Address.city
   price = "#{rand(1..10)} €"
-  fish = Fish.new(name: name, description: description, location: location, price: price)
+  user = users.sample
+  fish = Fish.new(name: name, description: description, location: location, price: price, user: user)
   fish.photo.attach(io: file, filename: 'fish.png', content_type: 'image/png')
   fish.save
-  puts 'Fish successfully created'
+  puts "#{name} successfully created"
 end
 
 puts 'Finished :)'
