@@ -1,0 +1,56 @@
+.map {
+  /* The image used */
+  background-image: url("https://images.unsplash.com/photo-1566812201627-d2ebc5b056f9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+
+  /* Full height */
+  height: 100vh;
+  width: 30%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.index-container{
+    display: flex;
+}
+
+.fish-box{
+    width: 70%;
+}
+
+.fish-box > h1{
+    text-align: center;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 16px;
+    grid-gap: 16px;
+    color: #333; 
+}
+
+.fish-card{
+    border-radius: 10px;
+}
+
+.fish-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fish-info > .fish-price{
+  font-size: 20px;
+ }
+
+ .price-number{
+  font-weight: bold;
+  font-size: 25px;
+ }
+
+ .fish-specie{
+  font-style: italic;
+ }
+
