@@ -5,6 +5,7 @@ class CreateFish < ActiveRecord::Migration[6.0]
       t.string :name
       t.text :description
       t.integer :price
+      t.references :user, foreign_key: true
 
       t.timestamps
     end
