@@ -13,8 +13,9 @@ class FishController < ApplicationController
 
   def create
     @fish = Fish.new(fish_params)
+    @fish.user = current_user
     if @fish.save
-      redirect_to fish_path(@fish)
+      redirect_to root_path
     else
       render :new
     end
