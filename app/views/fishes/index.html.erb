@@ -5,19 +5,19 @@
     <h1>Find the ideal fish for you</h1>
     <div class="cards">
 
-        <% @fishes.each do |fish| %>
+      <% @fishes.each do |fish| %>
         <%= link_to fish_path(fish.id) do %>
           <div class="card fish-card">
-            <%# <img src="https://source.unsplash.com/featured/?fish,aquarium" class="card-img-top" alt="..."> %>
+          <%# <img src="https://source.unsplash.com/featured/?fish,aquarium" class="card-img-top" alt="..."> %>
             <div class="card-head" style="background-image: url('<%= cl_image_path fish.photo.key %>');"></div>
             <div class="card-body">
               <div class="fish-info">
                 <h3 class="card-title"><%= fish.name %></h3>
                 <p class="fish-price "><span class="price-number"><%= fish.price %></span><i class="fas fa-euro-sign"></i>/day</p>
               </div>
-                <p class="card-text fish-specie"><i class="fas fa-fish"></i></i> <%= fish.specie %> </p>
-                <p class="card-text fish-description"><i class="fas fa-map-marker-alt"></i> <%= fish.location %></p>
-              <%# <a href="#" class="btn btn-primary">More about me</a> %>
+              <p class="card-text fish-specie"><i class="fas fa-fish"></i> <%= fish.specie %> </p>
+              <p class="card-text fish-description"><i class="fas fa-map-marker-alt"></i> <%= fish.location %></p>
+            <%# <a href="#" class="btn btn-primary">More about me</a> %>
             </div>
           </div>
         <% end %>
