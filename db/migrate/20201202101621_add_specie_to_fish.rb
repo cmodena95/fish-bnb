@@ -1,5 +1,5 @@
 class AddSpecieToFish < ActiveRecord::Migration[6.0]
   def change
-    add_column :fish, :specie, :string
+    add_column :fishes, :specie, :string
   end
 end
