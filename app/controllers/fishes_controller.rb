@@ -1,4 +1,4 @@
-class FishController < ApplicationController
+class FishesController < ApplicationController
   def index
     @fishes = Fish.all
   end
