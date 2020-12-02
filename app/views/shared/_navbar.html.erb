@@ -22,7 +22,7 @@
           <%= image_tag "https://w7.pngwing.com/pngs/213/285/png-transparent-fish-cartoon-cute-cartoon-marine-fish-cartoon-character-marine-mammal-animals-thumbnail.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Home", root_path, class: "dropdown-item" %>
-            <%= link_to "Index", fish_index_path, class: "dropdown-item" %>
+            <%= link_to "Index", fishes_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
