@@ -23,6 +23,6 @@ class FishController < ApplicationController
   private
 
   def fish_params
-    params.require(:fish).permit(:name, :description, :location, :price, :photo)
+    params.require(:fish).permit(:name, :description, :location, :price, :specie, :photo)
   end
 end
