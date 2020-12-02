@@ -3,8 +3,8 @@
     <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1554562622-91f926fc46be?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1653&q=80);">
       <h1>You can have your own fish</h1>
       <p>It was never so easy to have your own fish...</p>
-      <a class="btn btn-outline-primary" href="#">I have a fish</a>
-      <a class="btn btn-outline-light" href="#">I'm looking for a fish</a>
+      <%= link_to "I have a fish", new_fish_path, class: "btn btn-outline-light" %>
+      <%= link_to "I'm looking for a fish", fish_index_path, class: "btn btn-outline-primary" %>
     </div>
   </div>
 
