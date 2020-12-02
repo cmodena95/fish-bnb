@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="form-row d-flex justify-content-center">
+    <%=simple_form_for (@fish) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :location %>
+      <%= f.input :price %>
+      <%= f.input :description %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit "List your Fish", class: "btn btn-outline-primary" %>
+      <%= link_to "Back", fish_index_path, class: "btn btn-outline-primary" %>
+    <% end %>
+  </div>
+</div>
+

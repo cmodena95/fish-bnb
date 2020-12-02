@@ -48,12 +48,13 @@ puts 'Generating new and improved fish...'
 
 25.times do
   file = URI.open('https://source.unsplash.com/featured/?fish')
-  name = Faker::GreekPhilosophers.name
+  name = Faker::Creature::Cat.name
   description = "#{Faker::Demographic.marital_status} #{Faker::Demographic.sex} #{Faker::Demographic.demonym} fish. #{Faker::Demographic.height(unit: :imperial)}"
   location = Faker::Address.city
   price = "#{rand(1..10)} €"
+  specie = Faker::GreekPhilosophers.name
   user = users.sample
-  fish = Fish.new(name: name, description: description, location: location, price: price, user: user)
+  fish = Fish.new(name: name, description: description, location: location, price: price, specie: specie, user: user)
   fish.photo.attach(io: file, filename: 'fish.png', content_type: 'image/png')
   fish.save
   puts "#{name} successfully created"
