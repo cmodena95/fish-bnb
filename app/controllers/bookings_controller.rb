@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.status = "pending"
     if @booking.save
-      # redirect_to fish_path(@booking.fish) #redirect to booking index when ready
+      redirect_to fish_bookings_path
     else
       redirect_to fish_path(@booking.fish)
     end
