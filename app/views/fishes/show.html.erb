@@ -47,18 +47,18 @@
     </div>
 
     <div>
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Availability</h5>
-
-          <h6 class="card-subtitle mb-2 text-muted">Coming soon.....</h6>
-          <%# <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="card-link">Card link</a> %>
-        </div>
+      <div class="card-fish">
+        <h5>Availability</h5>
+        <%= simple_form_for ([@fish, @booking]) do |f| %>
+          <%= f.input :start_date %>
+          <%= f.input :end_date %>
+          <%= f.submit "Fish It", class: "btn btn-primary" %>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
+
 <br>
 <br>
   <div class="map-container">

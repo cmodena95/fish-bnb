@@ -1,24 +1,11 @@
 class FishesController < ApplicationController
   def index
     @fishes = Fish.all
-
-    @markers = @fishes.geocoded.map do |fish|
-      {
-        lat: fish.latitude,
-        lng: fish.longitude,
-        infoWindow: { content: render_to_string(partial: "info_window", locals: { fish: fish }) }
-      }
-    end
   end
 
   def show
     @fish = Fish.find(params[:id])
-
-    @markers = [{
-      lat: @fish.latitude,
-      lng: @fish.longitude,
-      infoWindow: { content: render_to_string(partial: "info_window", locals: { fish: @fish }) }
-    }]
+    @booking = Booking.new
   end
 
   def new
