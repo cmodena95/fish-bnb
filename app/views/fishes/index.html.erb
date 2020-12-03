@@ -1,26 +1,45 @@
 <div class="index-container">
 
+
   <%# Fishes layout %>
   <div class="fish-box">
-    <div class="cards">
 
-      <% @fishes.each do |fish| %>
-        <%= link_to fish_path(fish.id) do %>
-          <div class="fish-card">
-          <%# <img src="https://source.unsplash.com/featured/?fish,aquarium" class="card-img-top" alt="..."> %>
-            <div class="card-head" style="background-image: url('<%= cl_image_path fish.photo.key %>');"></div>
-            <div class="card-body">
-              <div class="fish-info">
-                <h3 class="card-title"><%= fish.name %></h3>
-                <p class="fish-price "><span class="price-number"><%= fish.price %></span><i class="fas fa-euro-sign"></i>/day</p>
-              </div>
-              <p class="card-text fish-specie"><i class="fas fa-fish"></i> <%= fish.specie %> </p>
-              <p class="card-text fish-description"><i class="fas fa-map-marker-alt"></i> <%= fish.location %></p>
-            <%# <a href="#" class="btn btn-primary">More about me</a> %>
-            </div>
+    <div>
+
+        <div class="search-container">
+          <%= form_tag fishes_path, method: :get do %>
+          <div class="index-form">
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Search by name, location, keyword etc..."
+            %>
+            <%= submit_tag "Search", class: "btn btn-primary" %>
           </div>
+          <% end %>
+        </div>
+
+      <div class="cards">
+
+        <% @fishes.each do |fish| %>
+          <%= link_to fish_path(fish.id) do %>
+            <div class="fish-card">
+            <%# <img src="https://source.unsplash.com/featured/?fish,aquarium" class="card-img-top" alt="..."> %>
+              <div class="card-head" style="background-image: url('<%= cl_image_path fish.photo.key %>');"></div>
+              <div class="card-body">
+                <div class="fish-info">
+                  <h3 class="card-title"><%= fish.name %></h3>
+                  <p class="fish-price "><span class="price-number"><%= fish.price %></span><i class="fas fa-euro-sign"></i>/day</p>
+                </div>
+                <p class="card-text fish-specie"><i class="fas fa-fish"></i> <%= fish.specie %> </p>
+                <p class="card-text fish-description"><i class="fas fa-map-marker-alt"></i> <%= fish.location %></p>
+              <%# <a href="#" class="btn btn-primary">More about me</a> %>
+              </div>
+            </div>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
+
     </div>
   </div>
 
