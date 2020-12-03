@@ -1,39 +1,18 @@
 <div class="container">
   <h1>Your Fishes</h1>
+  <% @received_bookings.each do |booking| %>
   <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <img src="<%= cl_image_path booking.fish.photo.key %>" />
     <div class="card-product-infos">
-      <h2>Product name</h2>
-      <p>Product description with <strong>relevant info</strong> only.</p>
+      <h2>booking.fish.name</h2>
+      <p>"User.name" interested on "booking.fish.name" from "date_start" to "date_end"</p>
+      <p>Total: "booking.fish.price * total_days"</p>
     </div>
     <div class="card-product-request">    
       <a href="#" class="accept-icon"><i class="fas fa-check-circle"></i></a>
       <a href="#" class="reject-icon"><i class="fas fa-times-circle"></i></a>
     </div>
   </div>
-
-  <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-    <div class="card-product-infos">
-      <h2>Product name</h2>
-      <p>Product description with <strong>relevant info</strong> only.</p>
-    </div>
-    <div class="card-product-request">    
-      <a href="#" class="accept-icon"><i class="fas fa-check-circle"></i></a>
-      <a href="#" class="reject-icon"><i class="fas fa-times-circle"></i></a>
-    </div>
-  </div>
-
-  <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-    <div class="card-product-infos">
-      <h2>Product name</h2>
-      <p>Product description with <strong>relevant info</strong> only.</p>
-    </div>
-    <div class="card-product-request">    
-      <a href="#" class="accept-icon"><i class="fas fa-check-circle"></i></a>
-      <a href="#" class="reject-icon"><i class="fas fa-times-circle"></i></a>
-    </div>
-  </div>
+  <% end %>
 </div>
  
