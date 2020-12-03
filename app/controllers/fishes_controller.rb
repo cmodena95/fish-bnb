@@ -1,6 +1,16 @@
 class FishesController < ApplicationController
   def index
-    @fishes = Fish.all
+    if params[:query].present?
+      sql_query = " \
+        fishes.name @@ :query \
+        OR fishes.location @@ :query \
+        OR fishes.specie @@ :query \
+        OR fishes.description @@ :query \
+      "
+      @fishes = Fish.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @fishes = Fish.all
+    end
 
 
     @markers = @fishes.geocoded.map do |fish|
