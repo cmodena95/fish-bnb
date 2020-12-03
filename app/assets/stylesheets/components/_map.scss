@@ -9,7 +9,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   /* Fix Fish on the Right of Screen */
-  height: 100vh;
   position: sticky;
   top: 0;
 }
@@ -20,6 +19,9 @@
 
 .fish-box{
     width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .fish-box > h1{
@@ -29,12 +31,12 @@
 
 .cards{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 16px;
-    padding: 48px;
-    margin: 0 32px 0 32px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
     color: #333;
-
+    flex-grow: 1;
+    display: grid;
+    padding: 16px;
 }
 
 .cards a{
@@ -43,10 +45,14 @@
 }
 
 .fish-card{
-    border-radius: 10px;
-    width: 22rem;
-    margin-right: 0;
-    height: 400px !important;
+  border-radius: 10px;
+  width: auto;
+  margin-right: 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: color 0.3s ease-in-out;
+  &:hover{
+    color: midnightblue;
+  }
 }
 
 .card-head{
@@ -79,3 +85,35 @@
  .fish-specie{
   font-style: italic;
  }
+
+ /*Media Queries*/
+
+/*Smallest device*/
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .map {
+    display: none;
+  }
+  .index-container{
+    justify-content: center;
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .map {
+    display: block;
+  }
+}
