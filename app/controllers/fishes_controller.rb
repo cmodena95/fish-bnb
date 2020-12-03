@@ -1,6 +1,13 @@
 class FishesController < ApplicationController
   def index
     @fishes = Fish.all
+
+    @markers = @fishes.geocoded.map do |fish|
+      {
+        lat: fish.latitude,
+        lng: fish.longitude
+      }
+    end
   end
 
   def show
