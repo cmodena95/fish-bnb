@@ -13,6 +13,7 @@ class BookingsController < ApplicationController
     @fish = Fish.find(params[:fish_id])
     @booking = Booking.new(booking_params)
     @booking.fish = @fish
+    @booking.user = current_user
     @booking.status = "pending"
     if @booking.save
       # redirect_to fish_path(@booking.fish) #redirect to booking index when ready
