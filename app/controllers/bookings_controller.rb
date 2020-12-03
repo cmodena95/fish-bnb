@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-    
+
   def index
     @applied_bookings = current_user.bookings
     @received_bookings = current_user.received_bookings
@@ -19,6 +19,19 @@ class BookingsController < ApplicationController
       redirect_to fish_bookings_path
     else
       redirect_to fish_path(@booking.fish)
+    end
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    if params[:query] == "accepted"
+      @booking.status = "accepted"
+      @booking.save!
+      redirect_to bookings_path
+    elsif params[:query] == "rejected"
+      @booking.status = "rejected"
+      @booking.save!
+      redirect_to bookings_path
     end
   end
 
