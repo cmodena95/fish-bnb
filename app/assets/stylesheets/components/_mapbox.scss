@@ -1,0 +1,25 @@
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+
+.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+}
+
+#map {
+  margin: 0 auto;
+}
+
+// Comment to deal with git revert of geocoder
