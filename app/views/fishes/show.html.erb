@@ -52,7 +52,7 @@
         <%= simple_form_for ([@fish, @booking]) do |f| %>
           <%= f.input :start_date %>
           <%= f.input :end_date %>
-          <%= f.submit "Fish It", class: "btn btn-primary" %>
+          <%= link_to "book", fish_bookings_path(@fish.id), class: "btn btn-primary" %>
         <% end %>
       </div>
     </div>
