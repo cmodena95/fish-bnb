@@ -1,4 +1,10 @@
 class BookingsController < ApplicationController
+    
+  def index
+    @applied_bookings = current_user.bookings
+    @received_bookings = current_user.received_bookings
+  end
+
   def new
     @fish = Fish.find(params[:fish_id])
   end
@@ -20,9 +26,5 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(:status, :start_date, :end_date)
-  end
-
-  def index
-    @bookings = Booking.all
   end
 end
