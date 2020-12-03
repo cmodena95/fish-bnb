@@ -5,6 +5,7 @@ class FishesController < ApplicationController
 
   def show
     @fish = Fish.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
