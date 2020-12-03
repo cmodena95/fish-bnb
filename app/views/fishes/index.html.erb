@@ -1,13 +1,12 @@
 <div class="index-container">
 
   <%# Fishes layout %>
-  <div class="fish-box mt-3 ml-1">
-    <h1>Find the ideal fish for you</h1>
+  <div class="fish-box">
     <div class="cards">
 
       <% @fishes.each do |fish| %>
         <%= link_to fish_path(fish.id) do %>
-          <div class="card fish-card">
+          <div class="fish-card">
           <%# <img src="https://source.unsplash.com/featured/?fish,aquarium" class="card-img-top" alt="..."> %>
             <div class="card-head" style="background-image: url('<%= cl_image_path fish.photo.key %>');"></div>
             <div class="card-body">
