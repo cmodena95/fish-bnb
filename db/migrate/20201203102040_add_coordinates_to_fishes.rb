@@ -4,3 +4,5 @@ class AddCoordinatesToFishes < ActiveRecord::Migration[6.0]
     add_column :fishes, :longitude, :float
   end
 end
+
+# Comment to deal with git revert of geocoder

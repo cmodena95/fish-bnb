@@ -30,6 +30,8 @@ import "bootstrap";
 
 import { initMapbox } from '../plugins/init_mapbox';
 
+// Comment to deal with git revert of geocoder
+
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();

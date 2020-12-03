@@ -35,3 +35,5 @@ const initMapbox = () => {
 };
 
 export { initMapbox };
+
+// Comment to deal with git revert of geocoder

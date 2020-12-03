@@ -41,3 +41,5 @@ class FishesController < ApplicationController
     params.require(:fish).permit(:name, :description, :location, :price, :specie, :photo)
   end
 end
+
+# Command to deal with git revert of geocoder
