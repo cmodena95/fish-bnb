@@ -9,6 +9,7 @@ class FishesController < ApplicationController
         lng: fish.longitude,
         infoWindow: { content: render_to_string(partial: "info_window", locals: { fish: fish }) }
       }
+    end
   end
 
   def show
@@ -44,4 +45,3 @@ class FishesController < ApplicationController
   end
 end
 
-# Command to deal with git revert of geocoder
