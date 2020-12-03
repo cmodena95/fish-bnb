@@ -42,7 +42,7 @@ class FishesController < ApplicationController
     @fish = Fish.new(fish_params)
     @fish.user = current_user
     if @fish.save
-      redirect_to root_path
+      redirect_to fishes_path
     else
       render :new
     end
