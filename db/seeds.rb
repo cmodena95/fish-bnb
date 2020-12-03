@@ -9,6 +9,9 @@
 require 'faker'
 require "open-uri"
 
+puts "Destroying all the bookings..."
+Booking.destroy_all
+
 puts 'Flushing old fish down the toilet...'
 
 Fish.destroy_all
@@ -71,7 +74,7 @@ file = URI.open('https://images.unsplash.com/photo-1537126051263-80a6188f274a?ix
   location = "Ausias march 125"
   price = "#{rand(1..10)} €"
   specie = "Atlantic cod"
-  user = users.sample # no need to change this line
+  user = user1 # no need to change this line
   fish = Fish.new(name: name, description: description, location: location, price: price, specie: specie, user: user)
   fish.photo.attach(io: file, filename: 'fish1.png', content_type: 'image/png')
   fish.save!
@@ -85,7 +88,7 @@ file = URI.open('https://images.unsplash.com/photo-1559717201-2879521b49f4?ixid=
   location = "Carl Av. 12"
   price = "#{rand(1..10)} €"
   specie = "Blenny"
-  user = users.sample # no need to change this line
+  user = user1 # no need to change this line
   fish = Fish.new(name: name, description: description, location: location, price: price, specie: specie, user: user)
   fish.photo.attach(io: file, filename: 'fish1.png', content_type: 'image/png')
   fish.save!
@@ -98,7 +101,7 @@ file = URI.open('https://images.unsplash.com/photo-1590009617727-f0c214b36afc?ix
   location = "Norma Av. 859"
   price = "#{rand(1..10)} €"
   specie = "Bigeye"
-  user = users.sample # no need to change this line
+  user = user1 # no need to change this line
   fish = Fish.new(name: name, description: description, location: location, price: price, specie: specie, user: user)
   fish.photo.attach(io: file, filename: 'fish1.png', content_type: 'image/png')
   fish.save!
@@ -111,7 +114,7 @@ file = URI.open('https://images.unsplash.com/photo-1561286806-8546113391e4?ixid=
   location = "Pasaig San Joan 90"
   price = "#{rand(1..10)} €"
   specie = "Barbel"
-  user = users.sample # no need to change this line
+  user = user2 # no need to change this line
   fish = Fish.new(name: name, description: description, location: location, price: price, specie: specie, user: user)
   fish.photo.attach(io: file, filename: 'fish1.png', content_type: 'image/png')
   fish.save!
@@ -124,7 +127,7 @@ file = URI.open('https://images.unsplash.com/photo-1588160380620-7a01c6f25f48?ix
   location = "Verneda 760"
   price = "#{rand(1..10)} €"
   specie = "Redhorse sucker"
-  user = users.sample # no need to change this line
+  user = user2 # no need to change this line
   fish = Fish.new(name: name, description: description, location: location, price: price, specie: specie, user: user)
   fish.photo.attach(io: file, filename: 'fish1.png', content_type: 'image/png')
   fish.save!
@@ -137,7 +140,7 @@ file = URI.open('https://images.unsplash.com/photo-1531959870249-9f9b729efcf4?ix
   location = "Arago 210"
   price = "#{rand(1..10)} €"
   specie = "Whitefish"
-  user = users.sample # no need to change this line
+  user = user2 # no need to change this line
   fish = Fish.new(name: name, description: description, location: location, price: price, specie: specie, user: user)
   fish.photo.attach(io: file, filename: 'fish1.png', content_type: 'image/png')
   fish.save!
@@ -150,7 +153,7 @@ file = URI.open('https://images.unsplash.com/photo-1601545529671-eda205227204?ix
   location = "Gran via 946"
   price = "#{rand(1..10)} €"
   specie = "Vimba"
-  user = users.sample # no need to change this line
+  user = user3 # no need to change this line
   fish = Fish.new(name: name, description: description, location: location, price: price, specie: specie, user: user)
   fish.photo.attach(io: file, filename: 'fish1.png', content_type: 'image/png')
   fish.save!
@@ -162,7 +165,7 @@ file = URI.open('https://images.unsplash.com/photo-1545816250-e12bedba42ba?ixid=
   location = "Av Diagonal 346"
   price = "#{rand(1..10)} €"
   specie = "Tope"
-  user = users.sample # no need to change this line
+  user = user3 # no need to change this line
   fish = Fish.new(name: name, description: description, location: location, price: price, specie: specie, user: user)
   fish.photo.attach(io: file, filename: 'fish1.png', content_type: 'image/png')
   fish.save!
@@ -175,7 +178,7 @@ file = URI.open('https://images.unsplash.com/photo-1548058256-5f08a2bf4f98?ixid=
   location = "Av del mar 6"
   price = "#{rand(1..10)} €"
   specie = "Tapetail"
-  user = users.sample # no need to change this line
+  user = user3# no need to change this line
   fish = Fish.new(name: name, description: description, location: location, price: price, specie: specie, user: user)
   fish.photo.attach(io: file, filename: 'fish1.png', content_type: 'image/png')
   fish.save!
@@ -188,7 +191,7 @@ file = URI.open('https://images.unsplash.com/photo-1579718417786-049683d04b72?ix
   location = "Bilbao 6"
   price = "#{rand(1..10)} €"
   specie = "Oldwife"
-  user = users.sample # no need to change this line
+  user = user4# no need to change this line
   fish = Fish.new(name: name, description: description, location: location, price: price, specie: specie, user: user)
   fish.photo.attach(io: file, filename: 'fish1.png', content_type: 'image/png')
   fish.save!
@@ -200,7 +203,7 @@ file = URI.open('https://images.unsplash.com/photo-1540252965826-e120cfb72bed?ix
   location = "New York 645"
   price = "#{rand(1..10)} €"
   specie = "Deep sea eel"
-  user = users.sample # no need to change this line
+  user = user4 # no need to change this line
   fish = Fish.new(name: name, description: description, location: location, price: price, specie: specie, user: user)
   fish.photo.attach(io: file, filename: 'fish1.png', content_type: 'image/png')
   fish.save!
@@ -212,11 +215,16 @@ file = URI.open('https://images.unsplash.com/photo-1540252965826-e120cfb72bed?ix
   location = "Av Marina 645"
   price = "#{rand(1..10)} €"
   specie = "Guramis"
-  user = users.sample # no need to change this line
+  user = user4# no need to change this line
   fish = Fish.new(name: name, description: description, location: location, price: price, specie: specie, user: user)
   fish.photo.attach(io: file, filename: 'fish1.png', content_type: 'image/png')
   fish.save!
   puts "#{name} successfully created"
+
+puts "Creating bookings..."
+
+puts "Creating booking number 1... "
+Booking.new(status: "pending", start_date:"2020-12-11", end_date:"2020-12-14", user: user3, fish:)
 
 puts 'Finished :)'
 
