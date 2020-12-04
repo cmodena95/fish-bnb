@@ -1,39 +1,52 @@
 <div class="container">
   <h1>Your Fishes</h1>
+  <% @received_bookings.each do |booking| %>
   <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <img src="<%= cl_image_path booking.fish.photo.key %>" />
     <div class="card-product-infos">
-      <h2>Product name</h2>
-      <p>Product description with <strong>relevant info</strong> only.</p>
+      <h3><%= booking.fish.name %></h3>
+      <p><i class="fas fa-fish"></i> <%= booking.fish.specie %></p>
+      <p><i class="far fa-calendar-times"></i> &nbsp;<%= booking.start_date %> (<%= (booking.end_date - booking.start_date).to_i %> days)</p>
+      <p><i class="far fa-envelope"></i> &nbsp;<%= booking.user.email %></p>
+      <br>
+      <h4>Total: <%= booking.fish.price * (booking.end_date - booking.start_date).to_i %><i class="fas fa-euro-sign"></i></h4>
     </div>
-    <div class="card-product-request">    
-      <a href="#" class="accept-icon"><i class="fas fa-check-circle"></i></a>
-      <a href="#" class="reject-icon"><i class="fas fa-times-circle"></i></a>
+    <div class="card-product-request">
+      <% if booking.status == "pending" %>
+        <%= link_to booking_path(booking, query: "accepted"), method: :patch, data: { confirm: "Are you sure?" } do %>
+          <i class="accept-icon fas fa-check-circle"></i>
+        <% end %>
+        <%= link_to booking_path(booking, query: "rejected"), method: :patch, data: { confirm: "Are you sure?" } do %>
+          <i class="reject-icon fas fa-times-circle"></i>
+        <% end %>
+      <% elsif booking.status == 'accepted'%>
+        <%# communicate to the user that fish has been accepted %>
+        <h5 class="accepted-text"><i class="fas fa-check"></i> Accepted</h5>
+      <% elsif booking.status == 'rejected'%>
+        <%# Communicate that has been rejected %>
+      <% end %>
     </div>
   </div>
+  <% end %>
 
+  <h1>Fishes you applied for</h1>
+  <% @applied_bookings.each do |booking| %>
   <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <img src="<%= cl_image_path booking.fish.photo.key %>" />
     <div class="card-product-infos">
-      <h2>Product name</h2>
-      <p>Product description with <strong>relevant info</strong> only.</p>
+      <h2><%= booking.fish.name %></h2>
+      <p><%= booking.user.email %> is interested on <%= booking.fish.name %> from <%= booking.start_date %> to <%= booking.end_date %></p>
+      <p>Total: "booking.fish.price * total_days"</p>
     </div>
-    <div class="card-product-request">    
-      <a href="#" class="accept-icon"><i class="fas fa-check-circle"></i></a>
-      <a href="#" class="reject-icon"><i class="fas fa-times-circle"></i></a>
+    <div class="card-product-request">
+      <% if booking.status == "pending" %>
+       <%# Communicate to the user that fish still pending %>
+      <% elsif booking.status == 'accepted'%>
+        <%# communicate to the user that fish has been accepted %>
+      <% elsif booking.status == 'rejected'%>
+        <%# Communicate that has been rejected %>
+      <% end %>
     </div>
   </div>
-
-  <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-    <div class="card-product-infos">
-      <h2>Product name</h2>
-      <p>Product description with <strong>relevant info</strong> only.</p>
-    </div>
-    <div class="card-product-request">    
-      <a href="#" class="accept-icon"><i class="fas fa-check-circle"></i></a>
-      <a href="#" class="reject-icon"><i class="fas fa-times-circle"></i></a>
-    </div>
-  </div>
+  <% end %>
 </div>
- 

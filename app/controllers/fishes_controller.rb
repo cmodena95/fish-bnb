@@ -1,6 +1,16 @@
 class FishesController < ApplicationController
   def index
-    @fishes = Fish.all
+    if params[:query].present?
+      sql_query = " \
+        fishes.name @@ :query \
+        OR fishes.location @@ :query \
+        OR fishes.specie @@ :query \
+        OR fishes.description @@ :query \
+      "
+      @fishes = Fish.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @fishes = Fish.all
+    end
 
 
     @markers = @fishes.geocoded.map do |fish|
@@ -32,7 +42,7 @@ class FishesController < ApplicationController
     @fish = Fish.new(fish_params)
     @fish.user = current_user
     if @fish.save
-      redirect_to root_path
+      redirect_to fishes_path
     else
       render :new
     end
@@ -45,4 +55,3 @@ class FishesController < ApplicationController
   end
 end
 
-# Command to deal with git revert of geocoder
