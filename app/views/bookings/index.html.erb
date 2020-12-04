@@ -50,7 +50,7 @@
        <%# Communicate to the user that fish still pending %>
        <h5 class="pending-text d-flex justify-content-end"><i class="fas fa-circle"></i> &nbsp;Pending</h5>
        <%= link_to booking_path(booking), method: :delete, data: { confirm: "Are you sure?" } do %>
-          <i class="reject-icon d-flex justify-content-end fas fa-trash"></i>
+          <i class="trash-icon d-flex justify-content-end fas fa-times"></i>
         <% end %>
       <% elsif booking.status == 'accepted'%>
         <%# communicate to the user that fish has been accepted %>
