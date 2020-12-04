@@ -84,7 +84,7 @@ file = URI.open('https://images.unsplash.com/photo-1537126051263-80a6188f274a?ix
   location = "Ausias march 125"
   price = "#{rand(1..10)} €"
   specie = "Atlantic cod"
-  user = user1 # no need to change this line
+  user = user5 # no need to change this line
   fish1 = Fish.new(name: name, description: description, location: location, price: price, specie: specie, user: user)
   fish1.photo.attach(io: file, filename: 'fish1.png', content_type: 'image/png')
   fish1.save!
@@ -98,7 +98,7 @@ file = URI.open('https://images.unsplash.com/photo-1559717201-2879521b49f4?ixid=
   location = "Carl Av. 12"
   price = "#{rand(1..10)} €"
   specie = "Blenny"
-  user = user1 # no need to change this line
+  user = user5 # no need to change this line
   fish2 = Fish.new(name: name, description: description, location: location, price: price, specie: specie, user: user)
   fish2.photo.attach(io: file, filename: 'fish1.png', content_type: 'image/png')
   fish2.save!
@@ -111,7 +111,7 @@ file = URI.open('https://images.unsplash.com/photo-1590009617727-f0c214b36afc?ix
   location = "Norma Av. 859"
   price = "#{rand(1..10)} €"
   specie = "Bigeye"
-  user = user1 # no need to change this line
+  user = user5 # no need to change this line
   fish3 = Fish.new(name: name, description: description, location: location, price: price, specie: specie, user: user)
   fish3.photo.attach(io: file, filename: 'fish1.png', content_type: 'image/png')
   fish3.save!
@@ -230,7 +230,7 @@ file = URI.open('https://images.unsplash.com/photo-1540252965826-e120cfb72bed?ix
   fish12.photo.attach(io: file, filename: 'fish1.png', content_type: 'image/png')
   fish12.save!
   puts "#{name} successfully created"
-  
+
 
 puts "Creating bookings..."
 
@@ -245,6 +245,21 @@ booking.save!
 puts "Creating booking number 3... "
 booking = Booking.new(status: "pending", start_date:"2022-12-11", end_date:"2023-12-14", user: user4, fish: fish9)
 booking.save!
+
+
+
+puts "Creating booking number 4... "
+booking = Booking.new(status: "pending", start_date:"2021-05-22", end_date:"2021-06-12", user: user4, fish: fish1)
+booking.save!
+
+puts "Creating booking number 5... "
+booking = Booking.new(status: "pending", start_date:"2021-12-11", end_date:"2021-12-14", user: user2, fish: fish2)
+booking.save!
+
+puts "Creating booking number 6... "
+booking = Booking.new(status: "pending", start_date:"2021-12-18", end_date:"2021-12-22", user: user5, fish: fish6)
+booking.save!
+
 
 puts "Booking finished"
 
