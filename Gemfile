@@ -26,6 +26,7 @@ gem 'faker'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
 gem 'geocoder'
+gem 'pundit'
 
 # Comment to deal with git revert of geocoder
 

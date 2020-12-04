@@ -9,6 +9,7 @@ class FishesController < ApplicationController
         lng: fish.longitude,
         infoWindow: { content: render_to_string(partial: "info_window", locals: { fish: fish }) }
       }
+    end
   end
 
   def show
