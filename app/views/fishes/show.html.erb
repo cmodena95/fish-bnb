@@ -10,7 +10,7 @@
 
     <div>
       <% if @fish.user == current_user %>
-        <%= link_to fish_path, method: :delete do %>
+        <%= link_to fish_path, method: :delete, data: { confirm: "Are you sure?" } do %>
           <span class="btn btn-outline-danger">Delete this fish</span>
         <% end %>
       <% end %>
