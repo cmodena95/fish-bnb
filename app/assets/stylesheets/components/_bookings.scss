@@ -97,3 +97,8 @@ body{
 .pending-text{
   color: goldenrod;
 }
+
+.heading-and-back-button {
+  display: flex;
+  justify-content: space-between;
+}
