@@ -1,4 +1,6 @@
 class FishesController < ApplicationController
+  before_action :require_permission, only: :destroy
+
   def index
     if params[:query].present?
       sql_query = " \
@@ -48,10 +50,25 @@ class FishesController < ApplicationController
     end
   end
 
+  def destroy
+    @fish = Fish.find(params[:id])
+    @fish.destroy
+
+    # no need for app/views/fish/destroy.html.erb
+    redirect_to fishes_path
+  end
+
   private
 
   def fish_params
     params.require(:fish).permit(:name, :description, :location, :price, :specie, :photo)
+  end
+
+  def require_permission
+    if current_user != Fish.find(params[:id]).user
+      redirect_to fishes_path
+    #Or do something else here
+    end
   end
 end
 

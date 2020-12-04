@@ -7,11 +7,16 @@
     </div>
 
     <%# (This button is just avaliable if the user is the owner) %>
+
     <div>
-      <%# <a class="btn btn-outline-danger" href="">Delete this fish</a> %>
-      <%= link_to fishes_path do %>
-        <span class="btn btn-outline-primary">Back</span>
+      <% if @fish.user == current_user %>
+        <%= link_to fish_path, method: :delete do %>
+          <span class="btn btn-outline-danger">Delete this fish</span>
+        <% end %>
       <% end %>
+        <%= link_to fishes_path do %>
+          <span class="btn btn-outline-primary">Back</span>
+        <% end %>
     </div>
   </div>
 
@@ -53,7 +58,7 @@
         <%= simple_form_for ([@fish, @booking]) do |f| %>
           <%= f.input :start_date %>
           <%= f.input :end_date %>
-          <%= link_to "Book your Fish", bookings_path(@fish.id), class: "btn btn-primary btn-lg btn-block" %>
+          <%= f.submit "Book your Fish", class: "btn btn-primary btn-lg btn-block" %>
         <% end %>
       </div>
     </div>
