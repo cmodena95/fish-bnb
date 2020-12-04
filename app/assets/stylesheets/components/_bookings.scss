@@ -34,14 +34,17 @@ body{
 
 .card-product h4 {
   padding-bottom: 42px;
+  color: #0E0000;
+  opacity: .4;
 }
 
 .card-product p {
   font-size: 22px;
   line-height: 1.4;
-  opacity: .95;
+  opacity: .65;
   margin-bottom: 0;
   margin-top: 8px;
+  font-weight: 600;
 }
 
 .card-product .card-product-infos {
@@ -50,12 +53,14 @@ body{
 }
 
 .card-product-request{
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
   margin-top: 32px;
   padding-right: 32px;
+  text-align: center;
 }
 
 .card-product-request > a{
@@ -83,6 +88,21 @@ body{
 
 .reject-icon:hover{
   font-size: 60px;
+  color: #df1b42;
+}
+
+.trash-icon{
+  position: absolute;
+  top: -25px;
+  right: 10px;
+  color: grey;
+  font-size: 18px;
+  transition: color 0.3s;
+  transition: font-size 0.3s;
+}
+
+.trash-icon:hover{
+  font-size: 20px;
   color: #df1b42;
 }
 
