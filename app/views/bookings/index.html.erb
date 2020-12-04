@@ -43,7 +43,7 @@
        <%# Communicate to the user that fish still pending %>
 
        <%= link_to booking_path(booking), method: :delete, data: { confirm: "Are you sure?" } do %>
-          <i class="fas fa-trash" style="color:red;"></i>
+          <i class="reject-icon fas fa-trash"></i>
         <% end %>
 
       <% elsif booking.status == 'accepted'%>
