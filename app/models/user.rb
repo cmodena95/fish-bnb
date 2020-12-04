@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  # has_one_attached :photo
   has_many :fishes
   has_many :booked_fishes, through: :bookings, source: :fishes
   has_many :bookings
