@@ -76,3 +76,8 @@ body{
 .accepted-text{
   color: hsl(157, 67%, 38%);
 }
+
+.heading-and-back-button {
+  display: flex;
+  justify-content: space-between;
+}
