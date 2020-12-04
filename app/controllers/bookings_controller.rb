@@ -15,10 +15,10 @@ class BookingsController < ApplicationController
     @booking.fish = @fish
     @booking.user = current_user
     @booking.status = "pending"
-    if @booking.save
-      redirect_to fish_bookings_path
+    if @booking.save!
+      redirect_to bookings_path
     else
-      redirect_to fish_path(@booking.fish)
+      redirect_to fish_path(@fish)
     end
   end
 
@@ -33,6 +33,13 @@ class BookingsController < ApplicationController
       @booking.save!
       redirect_to bookings_path
     end
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+
+    redirect_to bookings_path
   end
 
   private
