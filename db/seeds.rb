@@ -26,24 +26,34 @@ users = []
 puts 'Creating user 1...'
 
 user1 = User.create!(email: 'Leo@gmail.com', password: '123456')
+#leophoto = URI.open("https://avatars1.githubusercontent.com/u/68252652?s=400&u=4495b6b46f3e98d6867dabb8269f0d1a944c775e&v=4")
+#user1.photo.attach(io: leophoto, filename: 'leophoto.png', content_type: 'image/png')
 users << user1
 
 puts 'Creating user 2...'
 
 user2 = User.create!(email: 'Athi@gmail.com', password: '123456')
+#athiphoto = URI.open("https://avatars1.githubusercontent.com/u/68252652?s=400&u=4495b6b46f3e98d6867dabb8269f0d1a944c775e&v=4")
+#user2.photo.attach(io: athiphoto, filename: 'athiphoto.png', content_type: 'image/png')
 users << user2
 
 puts 'Creating user 3...'
 
 user3 = User.create!(email: 'Renan@gmail.com', password: '123456')
+#renanphoto = URI.open("https://avatars1.githubusercontent.com/u/68252652?s=400&u=4495b6b46f3e98d6867dabb8269f0d1a944c775e&v=4")
+#user3.photo.attach(io: renanphoto, filename: 'renanphoto.png', content_type: 'image/png')
 users << user3
 
 puts 'Creating user 4...'
 
 user4 = User.create!(email: 'Alvaro@gmail.com', password: '123456')
+#alvarophoto = URI.open("https://avatars1.githubusercontent.com/u/69932838?s=400&u=f72e996c5e2b7c8f35880bd2eab1d623b90c1a97&v=4")
+#user4.photo.attach(io: alvarophoto, filename: 'alvarophoto.png', content_type: 'image/png')
 users << user4
 
 user5 = User.create!(email: 'Cami@gmail.com', password: '123456')
+#camiphoto = URI.open("https://avatars1.githubusercontent.com/u/68252652?s=400&u=4495b6b46f3e98d6867dabb8269f0d1a944c775e&v=4")
+#user5.photo.attach(io: camiphoto, filename: 'camiphoto.png', content_type: 'image/png')
 users << user5
 
 puts 'Creating user 5...'
@@ -220,6 +230,7 @@ file = URI.open('https://images.unsplash.com/photo-1540252965826-e120cfb72bed?ix
   fish12.photo.attach(io: file, filename: 'fish1.png', content_type: 'image/png')
   fish12.save!
   puts "#{name} successfully created"
+  
 
 puts "Creating bookings..."
 
