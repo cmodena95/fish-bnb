@@ -41,6 +41,11 @@
     <div class="card-product-request">
       <% if booking.status == "pending" %>
        <%# Communicate to the user that fish still pending %>
+
+       <%= link_to booking_path(booking), method: :delete, data: { confirm: "Are you sure?" } do %>
+          <i class="fas fa-trash" style="color:red;"></i>
+        <% end %>
+
       <% elsif booking.status == 'accepted'%>
         <%# communicate to the user that fish has been accepted %>
       <% elsif booking.status == 'rejected'%>
