@@ -43,7 +43,7 @@
       <h3><%= booking.fish.name %></h3>
       <p><i class="fas fa-fish"></i> <%= booking.fish.specie %></p>
       <p><i class="far fa-calendar-times"></i> &nbsp;<%= booking.start_date %> (<%= (booking.end_date - booking.start_date).to_i %> days)</p>
-      <p><i class="far fa-envelope"></i> &nbsp;<%= booking.fish.user.email %></p>  
+      <p><i class="far fa-envelope"></i> &nbsp;<%= booking.fish.user.email %></p>
     </div>
     <div class="card-product-request">
       <% if booking.status == "pending" %>

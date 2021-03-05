@@ -1,6 +1,4 @@
 <div class="index-container">
-
-
   <%# Fishes layout %>
   <div class="fish-box border-rounded">
       <div class="search-container">
@@ -21,8 +19,11 @@
       <% @fishes.each do |fish| %>
         <%= link_to fish_path(fish.id) do %>
           <div class="fish-card">
-          <%# <img src="https://source.unsplash.com/featured/?fish,aquarium" class="card-img-top" alt="..."> %>
-            <div class="card-head" style="background-image: url('<%= cl_image_path fish.photo.key %>');"></div>
+            <% if fish.photo.attached? %>
+              <div class="card-head" style="background-image: url('<%= cl_image_path fish.photo.key %>');"></div>
+            <% else %>
+              <div class="card-head" style="background-image: url('https://source.unsplash.com/featured/?fish');"></div>
+            <% end %>
             <div class="card-body">
               <div class="fish-info">
                 <h3 class="card-title"><%= fish.name %></h3>

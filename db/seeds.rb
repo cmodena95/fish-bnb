@@ -80,7 +80,7 @@ puts 'Generating new and improved fish...'
 
 file = URI.open('https://images.unsplash.com/photo-1537126051263-80a6188f274a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTM2fHxmaXNofGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
   name = "Nemo"
-  description = "He love swimming and spend hours sleeping "
+  description = "Nemo love swimming and spend hours sleeping."
   location = "Ausias march 125"
   price = "#{rand(1..10)} €"
   specie = "Atlantic cod"
@@ -94,7 +94,7 @@ file = URI.open('https://images.unsplash.com/photo-1537126051263-80a6188f274a?ix
 
 file = URI.open('https://images.unsplash.com/photo-1559717201-2879521b49f4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80')
   name = "Tiburcio"
-  description = "eats a lot and bit if you bother him"
+  description = "Eats a lot and bites if you bother him."
   location = "Carl Av. 12"
   price = "#{rand(1..10)} €"
   specie = "Blenny"
@@ -107,7 +107,7 @@ file = URI.open('https://images.unsplash.com/photo-1559717201-2879521b49f4?ixid=
 
 file = URI.open('https://images.unsplash.com/photo-1590009617727-f0c214b36afc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTUzfHxmaXNofGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
   name = "George"
-  description = "He would prefer be swimming in the ocean not in a fishbowl"
+  description = "George would prefer to be swimming in the ocean and not in a fishbowl."
   location = "Norma Av. 859"
   price = "#{rand(1..10)} €"
   specie = "Bigeye"
@@ -120,7 +120,7 @@ file = URI.open('https://images.unsplash.com/photo-1590009617727-f0c214b36afc?ix
 
 file = URI.open('https://images.unsplash.com/photo-1561286806-8546113391e4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1054&q=80')
   name = "Marilyn"
-  description = "She hates his owner that's why she loves be adopted for a while"
+  description = "Hates hates owner so she would love be adopted for a while."
   location = "Pasaig San Joan 90"
   price = "#{rand(1..10)} €"
   specie = "Barbel"
@@ -133,7 +133,7 @@ file = URI.open('https://images.unsplash.com/photo-1561286806-8546113391e4?ixid=
 
 file = URI.open('https://images.unsplash.com/photo-1588160380620-7a01c6f25f48?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjM4fHxmaXNofGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
   name = "Marie"
-  description = "Has the extrange ability of breathe out of the water"
+  description = "Has the extraodinary ability to breathe out of water."
   location = "Verneda 760"
   price = "#{rand(1..10)} €"
   specie = "Redhorse sucker"
@@ -146,7 +146,7 @@ file = URI.open('https://images.unsplash.com/photo-1588160380620-7a01c6f25f48?ix
 
 file = URI.open('https://images.unsplash.com/photo-1531959870249-9f9b729efcf4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1926&q=80')
   name = "John"
-  description = "Calm and lovely, time to time likes to eat surfers"
+  description = "Calm and lovely; from time to time likes to eat surfers."
   location = "Arago 210"
   price = "#{rand(1..10)} €"
   specie = "Whitefish"
@@ -159,7 +159,7 @@ file = URI.open('https://images.unsplash.com/photo-1531959870249-9f9b729efcf4?ix
 
 file = URI.open('https://images.unsplash.com/photo-1601545529671-eda205227204?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTY0fHxmaXNofGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
   name = "Marta"
-  description = "Marta only likes vegetables for dinner"
+  description = "Marta only likes vegetables for dinner."
   location = "Gran via 946"
   price = "#{rand(1..10)} €"
   specie = "Vimba"
@@ -171,7 +171,7 @@ file = URI.open('https://images.unsplash.com/photo-1601545529671-eda205227204?ix
 
 file = URI.open('https://images.unsplash.com/photo-1545816250-e12bedba42ba?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1963&q=80')
   name = "Sandra"
-  description = "Her favourite sport is water polo"
+  description = "Favourite sport is water polo."
   location = "Av Diagonal 346"
   price = "#{rand(1..10)} €"
   specie = "Tope"
@@ -184,7 +184,7 @@ file = URI.open('https://images.unsplash.com/photo-1545816250-e12bedba42ba?ixid=
 
 file = URI.open('https://images.unsplash.com/photo-1548058256-5f08a2bf4f98?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1952&q=80')
   name = "Brandon"
-  description = "He likes fishing but his friends consider him a murderer"
+  description = "He likes fishing but his friends consider him a murderer."
   location = "Av del mar 6"
   price = "#{rand(1..10)} €"
   specie = "Tapetail"
@@ -197,7 +197,7 @@ file = URI.open('https://images.unsplash.com/photo-1548058256-5f08a2bf4f98?ixid=
 
 file = URI.open('https://images.unsplash.com/photo-1579718417786-049683d04b72?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')
   name = "Leo"
-  description = "Leo love swimming in warm water during sunny days"
+  description = "Leo loves swimming in warm water during sunny days."
   location = "Bilbao 6"
   price = "#{rand(1..10)} €"
   specie = "Oldwife"
@@ -209,7 +209,7 @@ file = URI.open('https://images.unsplash.com/photo-1579718417786-049683d04b72?ix
 
 file = URI.open('https://images.unsplash.com/photo-1540252965826-e120cfb72bed?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzMyfHxmaXNofGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
   name = "Charles"
-  description = "He would prefer to place the fishbowl near a TV because he loves watching action films "
+  description = "He would prefer to have the fishbowl placed near a TV because he loves watching action films."
   location = "New York 645"
   price = "#{rand(1..10)} €"
   specie = "Deep sea eel"
@@ -221,7 +221,7 @@ file = URI.open('https://images.unsplash.com/photo-1540252965826-e120cfb72bed?ix
 
   file = URI.open('https://images.unsplash.com/photo-1551464664-222eeb2d2034?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=962&q=80')
   name = "Robert"
-  description = "He love smoke cigarettes but, get frustrated since is quite complicated under the water"
+  description = "A heavy smoker but gets frustrated as this is quite complicated under water."
   location = "Av Marina 645"
   price = "#{rand(1..10)} €"
   specie = "Guramis"
